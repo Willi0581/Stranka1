@@ -33,22 +33,37 @@
 <body>
   <header>
     <font size=5 color=Blue>
-    <p1>Rocket league</p1>
+    <p id="title">Rocket league</p>
     </font>
   </header>
 
   <section>
-    <p>Rocket league je hra z roku 2015 ktorej vývojári sú Epic Games</p><br>
-    <p>V Rocket League ovládate auto na raketový pohon a snažíte sa trafiť obrovskú loptičku do súperovej bránky a zároveň brániť tú svoju. Môžete jazdiť, skákať, posilňovať a vykonávať vzdušné manévre, aby ste zasiahli loptu a prehrali svojich súperov. Hra si vyžaduje tímovú prácu, presnosť a rýchle reakcie, aby ste mohli strieľať góly a robiť zákroky. Hráči zbierajú posilňovacie podložky, aby získali rýchlosť a vykonali triky s vysokým lietaním. Existujú rôzne herné režimy vrátane príležitostných a súťažných zápasov, ako aj špeciálnych režimov, ako sú Hoops, Rumble a Snow Day. Rocket League je zmes arkádovej akcie a súťažných zručností, vďaka čomu je zábavná pre príležitostných aj vážnych hráčov.</p>
-
-   <img src="IMG/League.jpg" alt="Sample Image 1" width="1000"> <br>
-
-
+    <button onclick="translatePage()">Preložiť / Translate</button>
+    
+    <p id="intro">Rocket league je hra z roku 2015 ktorej vývojári sú Epic Games</p><br>
+    <p id="description">V Rocket League ovládate auto na raketový pohon a snažíte sa trafiť obrovskú loptičku do súperovej bránky a zároveň brániť tú svoju. Môžete jazdiť, skákať, posilňovať a vykonávať vzdušné manévre, aby ste zasiahli loptu a prehrali svojich súperov. Hra si vyžaduje tímovú prácu, presnosť a rýchle reakcie, aby ste mohli strieľať góly a robiť zákroky. Hráči zbierajú posilňovacie podložky, aby získali rýchlosť a vykonali triky s vysokým lietaním. Existujú rôzne herné režimy vrátane príležitostných a súťažných zápasov, ako aj špeciálnych režimov, ako sú Hoops, Rumble a Snow Day. Rocket League je zmes arkádovej akcie a súťažných zručností, vďaka čomu je zábavná pre príležitostných aj vážnych hráčov.</p>
+    
+    <img src="IMG/League.jpg" alt="Sample Image 1" width="1000"> <br>
 
     <button><a href="index.html"> späť </a> <br></button>
   </section>
 
-
+  <script>
+    let isSlovak = true;
+    function translatePage() {
+      if (isSlovak) {
+        document.getElementById("title").innerText = "Rocket League";
+        document.getElementById("intro").innerText = "Rocket League is a game from 2015 developed by Epic Games";
+        document.getElementById("description").innerText = "In Rocket League, you control a rocket-powered car and try to hit a giant ball into the opponent's goal while defending your own. You can drive, jump, boost, and perform aerial maneuvers to hit the ball and outplay your opponents. The game requires teamwork, precision, and quick reactions to score goals and make saves. Players collect boost pads to gain speed and perform high-flying tricks. There are various game modes, including casual and competitive matches, as well as special modes like Hoops, Rumble, and Snow Day. Rocket League is a mix of arcade action and competitive skills, making it fun for both casual and serious players.";
+        isSlovak = false;
+      } else {
+        document.getElementById("title").innerText = "Rocket league";
+        document.getElementById("intro").innerText = "Rocket league je hra z roku 2015 ktorej vývojári sú Epic Games";
+        document.getElementById("description").innerText = "V Rocket League ovládate auto na raketový pohon a snažíte sa trafiť obrovskú loptičku do súperovej bránky a zároveň brániť tú svoju. Môžete jazdiť, skákať, posilňovať a vykonávať vzdušné manévre, aby ste zasiahli loptu a prehrali svojich súperov. Hra si vyžaduje tímovú prácu, presnosť a rýchle reakcie, aby ste mohli strieľať góly a robiť zákroky. Hráči zbierajú posilňovacie podložky, aby získali rýchlosť a vykonali triky s vysokým lietaním. Existujú rôzne herné režimy vrátane príležitostných a súťažných zápasov, ako aj špeciálnych režimov, ako sú Hoops, Rumble a Snow Day. Rocket League je zmes arkádovej akcie a súťažných zručností, vďaka čomu je zábavná pre príležitostných aj vážnych hráčov.";
+        isSlovak = true;
+      }
+    }
+  </script>
 </body>
 </html>
-*
+
