@@ -1,3 +1,4 @@
+
 <html>
 <head>
   <title>volny cas</title>
@@ -25,33 +26,68 @@
     ul {
       list-style-type: square;
     }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button a {
+      color: white;
+      text-decoration: none;
+    }
   </style>
+  <script>
+    let isSlovak = true;
+    function translatePage() {
+      if (isSlovak) {
+        document.getElementById("title").innerText = "Free Time";
+        document.getElementById("intro").innerText = "In my free time, I like to relax by watching movies or TV shows.";
+        document.getElementById("games").innerText = "I also like playing video games with my friends.";
+        document.getElementById("activities").innerText = "I engage in various activities in my free time, such as:";
+        document.getElementById("reading").innerText = "Reading";
+        document.getElementById("sports").innerText = "Sports";
+        document.getElementById("gaming").innerText = "Playing video games";
+        isSlovak = false;
+      } else {
+        document.getElementById("title").innerText = "Volný čas";
+        document.getElementById("intro").innerText = "Vo voľnom čase rád oddychujem/relaxujem pozerním filmov či seriálov.";
+        document.getElementById("games").innerText = "A rád hrám video hry s mojimi priatelmi.";
+        document.getElementById("activities").innerText = "Venujem sa rôznym aktivitám vo svojom voľnom čase ako:";
+        document.getElementById("reading").innerText = "čítanie";
+        document.getElementById("sports").innerText = "šport";
+        document.getElementById("gaming").innerText = "hranie počítačových videohier";
+        isSlovak = true;
+      }
+    }
+  </script>
 </head>
 <body>
   <header>
-    <h1>Volný čas</h1>
+    <h1 id="title">Volný čas</h1>
   </header>
 
   <section>
-    <p>Vo voľnom čase rád oddychujem/relaxujem pozerním filmov či seriálov.</p>
-    <p>A rád hrám video hry s mojimi priatelmi.</p>
-    <p>Venujem sa rôznym aktivitám vo svojom voľnom čase ako:</p>
+    <p id="intro">Vo voľnom čase rád oddychujem/relaxujem pozerním filmov či seriálov.</p>
+    <p id="games">A rád hrám video hry s mojimi priatelmi.</p>
+    <p id="activities">Venujem sa rôznym aktivitám vo svojom voľnom čase ako:</p>
 
-        <li>čítanie</li>
+    <ul>
+        <li id="reading">čítanie</li>
         <ol>
            <li>Haikyuu!</li>
            <li>Horimiya</li>
            <li>The quintessential quintuplets</li>
         </ol>
-        <li>šport</li>
-
+        <li id="sports">šport</li>
         <ol>
            <li>volejbal</li>
            <li>bedminton</li>
            <li>motoršport</li>
         </ol>
-
-        <li>hranie počítačových videohier</li>
+        <li id="gaming">hranie počítačových videohier</li>
         <ol>
            <li>Rocket League</li>
            <li>Rainbow 6 siege</li>
@@ -60,9 +96,10 @@
            <li>Zenless Zone Zero</li>
            <li>iRacing</li>
         </ol>
+    </ul>
 
-    <button><a href="index.html"> späť </a> <br></button>
+    <button onclick="translatePage()">Preložiť / Translate</button>
+    <button><a href="index.html"> späť </a></button>
   </section>
-
 </body>
 </html>
