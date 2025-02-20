@@ -29,38 +29,48 @@
 </head>
 <body>
   <header>
-    <h1>Škola</h1>
+    <h1 id="title">Škola</h1>
   </header>
 
   <section>
-<header> <h1> Môj rozvrh hodín v týždni </h1></header><br>
-<table align="center" border="50">
-<tr><td></td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td></tr>
-<tr><td>Po</td> <td></td> <td></td> <td>ELK</td> <td>MAT</td> <td>FYZ</td> <td>NBV</td> <td>SJL</td> <td>ANJ</td></tr>
-<tr><td>Ut</td> <td>PRA</td> <td>PRA</td> <td>PRA</td> <td>EKO</td> <td>DEJ</td> <td>MAT</td> <td>FYZ</td> <td></td></tr>
-<tr><td>St</td> <td></td> <td></td> <td>DEJ</td> <td>TSV</td> <td>SJL</td> <td>ADK</td> <td>ADK</td> <td>UCT</td></tr>
-<tr><td>Št</td> <td></td> <td>SJL</td> <td>MAT</td> <td>EKO</td> <td>ELK</td> <td>UCT</td> <td>ANJ</td> <td>TSV</td></tr>
-<tr><td>Pi</td> <td></td> <td>API</td> <td>API</td> <td>EKO</td> <td>ELK</td> <td>ANJ</td> <td>OBN</td> <td></td></tr>
-</table>
-<br>
+    <button onclick="translatePage()">Preložiť / Translate</button>
 
-<header>
-<h1> História našej školy. </h1>
-</header>
-    <p>História každej školy je v prvom rade odrazom práce, nadšenia a obetavosti jej ľudí – učiteľov a žiakov, ktorí sa počas jej existencie podieľali na jej rozvoji. V prípade Strednej priemyselnej školy v Dubnici nad Váhom je to kolektív, ktorý už dlhé roky usilovne pracuje na tom, aby mladým ľuďom poskytol nielen teoretické vedomosti, ale aj praktické skúsenosti, ktoré ich pripravia na výzvy moderného sveta.
+    <header> <h1 id="scheduleTitle">Môj rozvrh hodín v týždni</h1></header><br>
+    <table align="center" border="50">
+      <tr><td></td> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td></tr>
+      <tr><td>Po</td> <td></td> <td></td> <td>ELK</td> <td>MAT</td> <td>FYZ</td> <td>NBV</td> <td>SJL</td> <td>ANJ</td></tr>
+      <tr><td>Ut</td> <td>PRA</td> <td>PRA</td> <td>PRA</td> <td>EKO</td> <td>DEJ</td> <td>MAT</td> <td>FYZ</td> <td></td></tr>
+      <tr><td>St</td> <td></td> <td></td> <td>DEJ</td> <td>TSV</td> <td>SJL</td> <td>ADK</td> <td>ADK</td> <td>UCT</td></tr>
+      <tr><td>Št</td> <td></td> <td>SJL</td> <td>MAT</td> <td>EKO</td> <td>ELK</td> <td>UCT</td> <td>ANJ</td> <td>TSV</td></tr>
+      <tr><td>Pi</td> <td></td> <td>API</td> <td>API</td> <td>EKO</td> <td>ELK</td> <td>ANJ</td> <td>OBN</td> <td></td></tr>
+    </table>
+    <br>
 
-Rovnako ako celkový systém školstva, aj história tejto školy prešla v priebehu päťdesiatich rokov mnohými zmenami. S rastom a rozvojom mesta Dubnica nad Váhom a jeho priemyselných podnikov sa aj škola vyvíjala, aby naplnila potreby priemyslu a vychovala kvalifikovaných odborníkov pre tento sektor.
+    <header>
+      <h1 id="historyTitle">História našej školy</h1>
+    </header>
+    <p id="historyText">História každej školy je v prvom rade odrazom práce, nadšenia a obetavosti jej ľudí – učiteľov a žiakov...</p>
 
-Mesto Dubnica nad Váhom prešlo zásadnými zmenami – z poľnohospodárskej obce sa stalo významným priemyselným centrom. Po založení školy sa začala budovať silná spolupráca medzi školou a miestnym podnikom, ktorý škole poskytoval potrebnú pomoc a škola zase pripravovala kvalifikovaných odborníkov pre výrobu. História školy je teda nerozlučne spätá s rozvojom mesta a jeho priemyslu.
-
-Vznik Strednej priemyselnej školy v Dubnici nad Váhom je úzko spojený s výstavbou veľkého strojárskeho podniku, ktorý zohral kľúčovú úlohu v ekonomickom rozvoji regiónu. Tento podnik, ktorého výstavba sa začala v roku 1929, bol zameraný na výrobu vojenského materiálu a stal sa súčasťou nemeckého koncernu po Mníchovských udalostiach. Po druhej svetovej vojne, keď bol závod zničený, sa z trosiek vyrástol nový podnik, ktorý sa stal základom pre vznik strojárskeho priemyslu v regióne.
-
-Zároveň vznikla aj potreba po vzdelaných odborníkoch, ktorí by podporili rozvoj podniku. Preto sa v Dubnici nad Váhom začala zriaďovať stredná odborná škola. V školskom roku 1948/1949 bola schválená a oficiálne vznikla Stredná priemyselná škola, ktorá bola v začiatkoch veľmi skromná. Škola začínala s malým počtom žiakov a učiteľov, no postupne rástla. V prvých rokoch boli vyučujúci odborníci z podniku a učitelia zo závodnej učňovskej školy.
-
-V roku 1950 sa už zriadil denné štúdium, kde začalo študovať 46 žiakov v odbore strojníctvo. Vďaka rastúcej potrebe kvalifikovaných technikov škola neustále rozširovala ponuku študijných programov. V júni 1951 škola vydala svojich prvých absolventov, ktorí sa stali súčasťou rastúceho priemyslu v regióne.</p>
-
-    <button><a href="index.html"> späť </a> <br></button>
+    <button><a href="index.html"> späť </a></button>
   </section>
 
+  <script>
+    let isSlovak = true;
+    function translatePage() {
+      if (isSlovak) {
+        document.getElementById("title").innerText = "School";
+        document.getElementById("scheduleTitle").innerText = "My Weekly Schedule";
+        document.getElementById("historyTitle").innerText = "History of Our School";
+        document.getElementById("historyText").innerText = "The history of every school is primarily a reflection of the work, enthusiasm, and dedication of its people - teachers and students...";
+        isSlovak = false;
+      } else {
+        document.getElementById("title").innerText = "Škola";
+        document.getElementById("scheduleTitle").innerText = "Môj rozvrh hodín v týždni";
+        document.getElementById("historyTitle").innerText = "História našej školy";
+        document.getElementById("historyText").innerText = "História každej školy je v prvom rade odrazom práce, nadšenia a obetavosti jej ľudí – učiteľov a žiakov...";
+        isSlovak = true;
+      }
+    }
+  </script>
 </body>
 </html>
