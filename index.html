@@ -33,28 +33,53 @@
 <body>
   <header>
     <font size=5 color=red>
-    <p1>Toto je Moja stránka. Vitajte!</p1>
+    <p id="welcome">Toto je Moja stránka. Vitajte!</p>
     </font>
   </header>
 
   <section>
-    <h2>O mne</h2>
+    <button onclick="translatePage()">Preložiť / Translate</button>
+    
+    <h2 id="about">O mne</h2>
     <p><strong>Meno: William Tomko-K</strong></p>
-    <p>Vek: 17</p>
-    <p>Pohlavie: muž</p>
-    <p>Bydlisko: Trenčín</p>
-    <marquee style="color: green;">Jediné miesto, na ktorom záleží, je prvé.</marquee>
+    <p id="age">Vek: 17</p>
+    <p id="gender">Pohlavie: muž</p>
+    <p id="residence">Bydlisko: Trenčín</p>
+    <marquee id="quote" style="color: green;">Jediné miesto, na ktorom záleží, je prvé.</marquee>
 
     <br><br>
 
-      <h1 id="nadpis">Ako rád trávim volný čas</h1>
-  <button onclick="zmenText()">Klikni ma"</button>
+    <h1 id="nadpis">Ako rád trávim voľný čas</h1>
+    <button onclick="zmenText()">Klikni ma</button>
 
-  <script>
-    function zmenText() {
-  document.getElementById("nadpis").innerText = "Voľný čas trávim počúvaním hudby, kreslením, hraním videohier a travenia času z rodinou.";
-    }
-  </script>
+    <script>
+      let isSlovak = true;
+      function translatePage() {
+        if (isSlovak) {
+          document.getElementById("welcome").innerText = "This is My Website. Welcome!";
+          document.getElementById("about").innerText = "About Me";
+          document.getElementById("age").innerText = "Age: 17";
+          document.getElementById("gender").innerText = "Gender: Male";
+          document.getElementById("residence").innerText = "Residence: Trenčín";
+          document.getElementById("quote").innerText = "The only place that matters is first place.";
+          document.getElementById("nadpis").innerText = "How I like to spend my free time";
+          isSlovak = false;
+        } else {
+          document.getElementById("welcome").innerText = "Toto je Moja stránka. Vitajte!";
+          document.getElementById("about").innerText = "O mne";
+          document.getElementById("age").innerText = "Vek: 17";
+          document.getElementById("gender").innerText = "Pohlavie: muž";
+          document.getElementById("residence").innerText = "Bydlisko: Trenčín";
+          document.getElementById("quote").innerText = "Jediné miesto, na ktorom záleží, je prvé.";
+          document.getElementById("nadpis").innerText = "Ako rád trávim voľný čas";
+          isSlovak = true;
+        }
+      }
+
+      function zmenText() {
+        document.getElementById("nadpis").innerText = "Voľný čas trávim počúvaním hudby, kreslením, hraním videohier a trávením času s rodinou.";
+      }
+    </script>
 
     <br><br>
 
