@@ -25,25 +25,47 @@
     ul {
       list-style-type: square;
     }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button a {
+      color: white;
+      text-decoration: none;
+    }
   </style>
+  <script>
+    function translate() {
+      var elements = document.querySelectorAll("[data-lang]");
+      elements.forEach(element => {
+        let slovakText = element.getAttribute("data-sk");
+        let englishText = element.getAttribute("data-en");
+        element.innerText = element.innerText === slovakText ? englishText : slovakText;
+      });
+    }
+  </script>
 </head>
 <body>
   <header>
-    <h1>Záluby</h1>
+    <h1 data-lang data-sk="Záluby" data-en="Hobbies">Záluby</h1>
   </header>
 
   <section>
-   <p>Zaujímam sa rád o:</p>
+    <p data-lang data-sk="Zaujímam sa rád o:" data-en="I am interested in:">Zaujímam sa rád o:</p>
     <ul>
-      <li>Motoršport</li>
-      <li>Počúvanie hudby</li>
-      <li>Cestovanie</li>
-      <li>Kreslenie</li>
-      <li>Prechádzky v prírode</li>
-      <li>cvičenie</li>
+      <li data-lang data-sk="Motoršport" data-en="Motorsport">Motoršport</li>
+      <li data-lang data-sk="Počúvanie hudby" data-en="Listening to music">Počúvanie hudby</li>
+      <li data-lang data-sk="Cestovanie" data-en="Traveling">Cestovanie</li>
+      <li data-lang data-sk="Kreslenie" data-en="Drawing">Kreslenie</li>
+      <li data-lang data-sk="Prechádzky v prírode" data-en="Nature walks">Prechádzky v prírode</li>
+      <li data-lang data-sk="Cvičenie" data-en="Exercising">cvičenie</li>
     </ul>
-    <button><a href="index.html"> späť </a> <br></button>
+    <button onclick="translate()">Translate</button>
+    <button><a href="index.html"> späť </a></button>
   </section>
-
 </body>
 </html>
